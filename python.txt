@@ -1,0 +1,133 @@
+
+#!usr/bin/python3
+
+
+%-formating was used before but not advisable for longer parameter & longer string
+
+NEW OPTION
+str.format() is an improvement on %-formating,uses call syntax
+extensible through _format_() method on d obj being converted to string
+
+1. REPLACEMENT FIELD
+name= "aishat"
+age= 24
+"hello,{},you are {}.". format(name,age)
+
+2. reference INDEX in any order
+hello{0}, you are {1}.format(name,age)
+
+3. INSERT VARIABLE NAME (you will be able to pass ob 
+and ref obj parameters n methods within braces)
+person= {'name': 'Eric', 'age': 54}
+"hello, {name},you are {age}.". format(name=person['name'], age=person['age'])
+OR with ** neat trick
+person= {'name': 'Eric', 'age': 54}
+"hello, {name},you are {age}.". format(**person)
+
+str.format() is not all roses and sunshine
+0- although  more easily readable than %-formatting
+--- but it can be more verbose when dealing with multiple
+ parameter & longer strings
+
+
+F-STRING :::A NEW AND IMPROVED WAY TO FORMAT STRING IN PYTHON
+
+Also called FORMATTED STRING LITERALS are str literals eval at runtime that have a f at the beginning 
+and curly braces containning exp that will be replaced with their values
+
+1--f'Hello,{name}, you are {age}.'
+2-- call function
+def to_lowercase(input):
+... return input.lower()
+name='eric'
+f"{to_lowercase(name)} is funny" 
+
+  LIST
+are group of data type separated by comma in a square bracket
+s=[1,2,3,5,9,0,7]
+=>can be sliced----s[:3]= [1,2,3] (returns a new list)
+=>can be indexed ---s[0] returns 1
+[:] - returns shallow copy of the list ---[1,2,3,5,9,0,7]
+=>can be concat
+s + [98,45] >>[1,2,3,5,9,0,7,98,45]
+=> mutable(ability to change content) s[3]=89 >> [1,2,3,89,9,0,7,98,45]
+=> add new item at the end of the list,APPEND() METHOD >>s.append(7*2)
+=> assignment to slices
+letters=[a,b,c,d]
+//replace
+letters[0:3]=[C,D,E] >>[C,D,E,d]
+// remove
+letters[0:3]=[] >>[d]
+// clears list and replace with empty list:
+letters[:]=[] >>[]
+
+EMBEDDED LISTs
+Craete list containing other lists
+
+z= [s,letters] >>[[1,2,3...],[C,D,E,d]]
+z[0][1] >> 2
+
+CONDITIONAL STATEMENT
+=>If and elif
+=> for statement : for w in words:...
+// to iterate over a copy using for statement
+
+RANGE
+range() function is a built-in func thats used when you do not
+need to iterate over a sequence of numbers 
+PASS STATEMENT
+does nothing usde when program requires no action
+
+MATCH STATEMENT
+=>Takes an exp and compares its values to
+successive patterns given as one or more case blocks
+=> similar to swtich st in js,jsva,c,but cab extract components(seq elements
+or obj attr) from the value into variables.
+
+DICTIONARIES
+tel={'yinka':4562,'dayo':1232} key:value
+list(tel)  ..lists all the key
+sorted(tel)...alphabetical order
+
+LOOPING THROUGH A SEQUENCE
+enumerate == loop through indexed
+==>for a,b in enumerate(['tic','tac','toe']):
+...     print(a,b)
+0 tic
+1 tac
+2 toe
+.ITEMS TP print ky:value pair
+==>for a,b in tel.items(['tic':12,'tac':98,'toe':65]):
+...     print(a,b)
+tic 12
+tac 98
+toe 65
+ZIP
+==>>> que=['name','quest','fav color']
+>>> ans=['aisha','holy grail','mio ni']
+>>> for q,a in zip(que,ans):
+...     print('What is your {0}? it is {1}'. format(q,a))
+...
+What is your name? it is aisha
+What is your quest? it is holy grail
+What is your fav color? it is mio ni
+
+LOOP IN REVERSE
+for i in reverse (range(1,10,3))
+
+LOOP IN SORTED ORDER
+for i in sorted(name)
+
+LOOP OVER UNIQUE ELEMENT by eliminating repeated values
+for i in sorted(set(name))
+
+==> CREATING A NEW LIST
+>>> import math
+>>> raw_data=[32.4,float('NaN'),98.5,34,6]
+>>> filter_data=[]
+>>> for value in raw_data:
+...     if not math.isnan(value):
+...             filter_data.append(value)
+...
+>>> filter_data
+[32.4, 98.5, 34, 6]
