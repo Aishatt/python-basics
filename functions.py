@@ -1,3 +1,5 @@
+import math
+import random
 #calculate BML
 def bml():
     my_name= str(input("what is your name: "))
@@ -57,11 +59,16 @@ def multi_player():
         print("computer wins")    
 
 #calculate th area of a circle
-def area() :
+def area_of_cir() :
     print("Area of a cirlce")
 #get radius from usr
-    radius = float(input("what is the radius of the circle ? \n"))
-    print("Area of a circle: \n",3.142 * radius*radius)
+    cir_r = float(input("what is the radius of the circle ? \n"))
+    cir_area = round(math.pi*cir_r**2) 
+    f= math.factorial(cir_area)
+    fm= math.fmod(cir_area,2) #remainder when x is div by y
+    ab= math.fabs(cir_area) #absolute val
+    print("Area of a circle: \n", cir_area)
+    print (f ,fm , ab)
 
 #Calculate Change 
 def calculate(change):
@@ -76,6 +83,15 @@ def calculate(change):
 #passing parameter(formal para..) to be called with args(actual para...)
 def stock(qty,item,price):
     print(f'{qty} {item} costs {price}')
+
+def rand_no():
+    print(random.seed(10))
+    print(random.random()) #random float between 0 & 1 
+    print(random.randint(10,50))
+    print(random.randrange(1,10))
+    print(random.randrange(10,50,5))
+
+
 
 #passing mutable parameter(lists)
 def append_list(my_list=[]):
@@ -98,8 +114,10 @@ if count == 11:
 #stock(1,'banana','$250')
 #sign_in()
 #traffic_light()
-multi_player()
-#area()
+#multi_player()
+#flag()
+#area_of_cir()
+rand_no()
 num1=4
 num2=2
 #print("division is", num1 % num2)
