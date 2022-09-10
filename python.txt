@@ -131,3 +131,13 @@ for i in sorted(set(name))
 ...
 >>> filter_data
 [32.4, 98.5, 34, 6]
+...
+...text= "im new,yes 12 are new"
+
+print(text.capitalize())
+print(text.casefold())
+print(text.center(50))
+print(text.count('new'))
+
+print(text.isalnum())
+print(len(text))"""

@@ -8,14 +8,53 @@ def bml():
     print(my_name + "\n" + age + "\n"+"BML = " + my_bml)
 
 #conditional loop, age requirement
-def age_requirement():
-    age = int(input("How Old are you? \n"))
-    required_age=18
-    print(age==required_age)
-    if (age==required_age):
-        print("This is the required age")
+def sign_in():
+    name= str(input("Enter name: "))
+    age = int(input("Enter age? \n"))
+    required_age= 18
+    if(name == "john"):
+        if (age is required_age):
+            print("welcome john")
+        elif(age > required_age):
+            print("old but still eligible")
+        
+        print("login sucessful")
     else:
-        print("You are not eligible")
+        print("input correct name")
+
+#traffic light code
+def traffic_light():
+    name="True"
+    light= input("what color can you see : ")
+    if name == "True" :
+        if light == "green":
+            print("green means go!")
+        elif light == "yellow":
+            print("yellow means wait!")
+        elif light == "red":
+            print("red means go!")
+        else:
+            print("not a traffic color") 
+
+        print("thats it!")
+    else:
+        print("not a user")    
+
+def multi_player():
+    player1= 10
+    player2=20
+    player3= 20
+
+    if (player1 < player2 and player2 < player3):
+        print('congrats player 3 you won')
+    elif (player1 > player2 and player2 < player3):
+        print('congrats player 1 you won')
+    elif(player1 < player2 and player2 > player3):
+        print('congrats player 2 you won')
+    elif(player1 == player2 or player2 == player3):
+        print('its a tie')
+    else:
+        print("computer wins")    
 
 #calculate th area of a circle
 def area() :
@@ -52,17 +91,19 @@ if count == 11:
     print("counting complete")
 
 #main  
-calculate(4)
-bml()
-append_list(["aisha","24","Developer"])
-print("Welcome s")
-stock(1,'banana','$250')
-age_requirement()
-area()
+#calculate(4)
+#bml()
+#append_list(["aisha","24","Developer"])
+#print("Welcome s")
+#stock(1,'banana','$250')
+#sign_in()
+#traffic_light()
+multi_player()
+#area()
 num1=4
 num2=2
-print("division is", num1 % num2)
-print("floor division", num1 // num2)
+#print("division is", num1 % num2)
+#print("floor division", num1 // num2)
 
 
 
