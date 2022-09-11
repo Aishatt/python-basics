@@ -90,8 +90,26 @@ def rand_no():
     print(random.randint(10,50))
     print(random.randrange(1,10))
     print(random.randrange(10,50,5))
+    a = 12
+    print(random.shuffle(a))
 
+#control members onboarding to be 50% of ship capacity
+def onboard():
+    capacity= int(input('capacity of your ferry: '))
+    threshold = capacity *( 50/100) #50% of te capacity
+    print( threshold)
+    for i in range(0,capacity,10):
+        if i > threshold :
+            print('capacity reached',i)
+            break
+        else:
+            print('passanger onboarded', i)
 
+def multiplication_table():
+    table= int(input('enter the number to get the multiplication table: '))
+    for i in range(1,13):
+        mul= table *i
+        print(table, 'x', i,'= ', mul )
 
 #passing mutable parameter(lists)
 def append_list(my_list=[]):
@@ -117,7 +135,9 @@ if count == 11:
 #multi_player()
 #flag()
 #area_of_cir()
-rand_no()
+#rand_no()
+#onboard()
+multiplication_table()
 num1=4
 num2=2
 #print("division is", num1 % num2)

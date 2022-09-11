@@ -1,10 +1,3 @@
-z= 1j+5
-y= 32.2
-r=int(y)
-a= int(y)
-print(type(a))
-print(type(z))
-
 
 multiline_str= """ejneen Lorem ipsum dolor sit amet,
 consectetur adipiscing elit,
